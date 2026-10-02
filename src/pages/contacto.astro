@@ -1,0 +1,49 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto | Tepehua Tech Solutions">
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-light mb-4">Contacto</h1>
+    <p class="text-text-muted mb-12">Estamos en Tlaxcala. Hablemos de tu proyecto.</p>
+
+    <div class="grid md:grid-cols-2 gap-12">
+      <section aria-label="Canales de contacto">
+        <h2 class="text-xl font-bold text-text-light mb-4">Canales directos</h2>
+        <ul class="space-y-3 text-text-muted">
+          <li><strong>Ubicación:</strong> Tlaxcala, Tlaxcala</li>
+          <li><strong>Email:</strong> contacto@tepehuatech.com</li>
+          <li><strong>WhatsApp:</strong> <a href="#" class="text-accent-cyan hover:underline">Ver WhatsApp Business</a></li>
+          <li><strong>Horario:</strong> Lunes a Viernes, 9:00 — 18:00</li>
+        </ul>
+      </section>
+
+      <section aria-label="Formulario de contacto">
+        <form class="space-y-4" onsubmit="event.preventDefault(); this.innerHTML='<p class=\'text-accent-cyan font-semibold\'>¡Gracias! Tu mensaje ha sido recibido.</p>';">
+          <div>
+            <label for="nombre" class="block text-sm text-text-muted mb-1">Nombre</label>
+            <input id="nombre" name="nombre" required type="text" placeholder="Tu nombre" class="w-full bg-card-surface border border-[#1E3E62]/50 rounded-lg px-4 py-3 text-text-light focus:outline-none focus:border-accent-cyan transition-colors" />
+          </div>
+          <div>
+            <label for="whatsapp" class="block text-sm text-text-muted mb-1">Teléfono / WhatsApp</label>
+            <input id="whatsapp" name="whatsapp" required type="tel" placeholder="52 1 55 ..." class="w-full bg-card-surface border border-[#1E3E62]/50 rounded-lg px-4 py-3 text-text-light focus:outline-none focus:border-accent-cyan transition-colors" />
+          </div>
+          <div>
+            <label for="servicio" class="block text-sm text-text-muted mb-1">Servicio requerido</label>
+            <select id="servicio" name="servicio" class="w-full bg-card-surface border border-[#1E3E62]/50 rounded-lg px-4 py-3 text-text-light focus:outline-none focus:border-accent-cyan transition-colors">
+              <option>Desarrollo personalizado</option>
+              <option>Mensajero Pro</option>
+              <option>Mantenimiento / RenovaPC</option>
+              <option>Automatización</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje" class="block text-sm text-text-muted mb-1">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Describe tu proyecto o consulta..." class="w-full bg-card-surface border border-[#1E3E62]/50 rounded-lg px-4 py-3 text-text-light focus:outline-none focus:border-accent-cyan transition-colors"></textarea>
+          </div>
+          <button type="submit" class="w-full bg-accent-cyan text-bg-server px-6 py-3 rounded-lg font-bold hover:bg-[#00B8DE] transition-all shadow-[0_0_15px_rgba(0,209,255,0.3)]">Enviar mensaje</button>
+        </form>
+      </section>
+    </div>
+  </main>
+</Layout>

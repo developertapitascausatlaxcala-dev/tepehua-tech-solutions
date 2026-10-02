@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+---
+
+<Layout title="Preguntas frecuentes | Tepehua Tech Solutions">
+  <main class="max-w-4xl mx-auto px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-light mb-4">Preguntas frecuentes</h1>
+    <p class="text-text-muted mb-12">Respuestas claras a las dudas más comunes sobre nuestros servicios.</p>
+
+    <FaqAccordion
+      question="¿Cómo garantiza Mensajero Pro la privacidad de los datos de mis clientes?"
+      answer="Mensajero Pro opera con una base de datos SQLite local en tu equipo. No hay dependencia de servidores externos, nubes públicas ni terceros. Tus datos permanecen 100% bajo tu control."
+    />
+
+    <FaqAccordion
+      question="¿Qué tipo de negocios pueden usar Mensajero Pro?"
+      answer="Está diseñado principalmente para centros de verificación vehicular y talleres automotrices locales, aunque puede adaptarse a cualquier negocio que requiera recordatorios programados basados en fechas y eventos."
+    />
+
+    <FaqAccordion
+      question="¿Cómo se contratan los servicios de desarrollo personalizado?"
+      answer="El proceso inicia con una consulta inicial sin costo para definir el alcance y los requisitos técnicos. Luego se presenta una propuesta con cronograma y presupuesto, y una vez aprobada, comienza el desarrollo en iteraciones claras."
+    />
+
+    <FaqAccordion
+      question="¿Qué soporte técnico incluye la implementación de un sistema?"
+      answer="Cada proyecto incluye soporte técnico inicial, documentación y capacitación básica. Para sistemas críticos, se pueden contratar planes de mantenimiento continuo con respuesta prioritaria."
+    />
+  </main>
+</Layout>

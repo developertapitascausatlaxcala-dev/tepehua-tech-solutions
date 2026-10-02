@@ -1,0 +1,40 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import FeatureCard from '../../components/FeatureCard.astro';
+---
+
+<Layout title="Mensajero Pro | Tepehua Tech Solutions">
+  <main class="max-w-6xl mx-auto px-6 py-16">
+
+    <section class="mb-16" aria-label="Descripción del producto">
+      <span class="text-sm text-accent-cyan font-medium">Producto destacado</span>
+      <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-light mt-2 mb-4">Mensajero Pro</h1>
+      <p class="text-lg text-text-muted max-w-3xl leading-relaxed">
+        Gestión inteligente y alertas automáticas para centros de verificación vehicular.
+        Automatiza el envío de recordatorios por WhatsApp siguiendo estrictamente el calendario oficial de Tlaxcala.
+      </p>
+    </section>
+
+    <section class="grid md:grid-cols-3 gap-8 mb-16" aria-label="Características técnicas">
+      <FeatureCard
+        title="Cálculo preciso"
+        description="Algoritmo basado en color de calcomanía y terminación de placa para fechas exactas de verificación."
+      />
+      <FeatureCard
+        title="Privacidad absoluta (100% local)"
+        description="Almacenamiento seguro en SQLite en el hardware propio del negocio. Cero dependencias externas."
+      />
+      <FeatureCard
+        title="Cero fricción"
+        description="Despacho automático directo al WhatsApp del cliente final sin intermediarios de terceros."
+      />
+    </section>
+
+    <section class="bg-card-surface rounded-3xl p-10 md:p-12 border border-[#1E3E62]/50 shadow-xl shadow-black/10 mb-16" aria-label="Llamado a la acción">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight text-text-light mb-4">¿Listo para no perder clientes recurrentes?</h2>
+      <p class="text-text-muted max-w-2xl mb-8">Solicita una demostración o licencia y comienza a automatizar tu centro de verificación hoy mismo.</p>
+      <a href="/contacto" class="inline-block bg-accent-cyan text-bg-server px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#00B8DE] transition-all shadow-[0_0_20px_rgba(0,209,255,0.3)]">Solicitar licencia o demo</a>
+    </section>
+
+  </main>
+</Layout>

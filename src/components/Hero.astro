@@ -1,0 +1,70 @@
+---
+interface Props {
+  headline: string;
+  subtitle: string;
+  primaryLabel?: string;
+  primaryHref?: string;
+  secondaryLabel?: string;
+  secondaryHref?: string;
+}
+
+const {
+  headline,
+  subtitle,
+  primaryLabel = "Descubrir Mensajero Pro",
+  primaryHref = "/soluciones/mensajero-pro",
+  secondaryLabel = "Explorar Servicios",
+  secondaryHref = "/servicios",
+} = Astro.props;
+---
+
+<section class="relative flex flex-col items-center justify-center text-center py-24 md:py-36 bg-gradient-to-b from-[#162B4D] via-[#0B192C] to-[#060E1A] rounded-3xl overflow-hidden shadow-inner">
+
+  <!-- Soft cyan glow orbs — premium server environment feel -->
+  <div class="absolute top-[-20%] left-[-10%] w-[70vw] h-[70vw] rounded-full bg-[#00D1FF]/10 blur-[120px] pointer-events-none"></div>
+  <div class="absolute bottom-[-15%] right-[-10%] w-[60vw] h-[60vw] rounded-full bg-[#00D1FF]/8 blur-[100px] pointer-events-none"></div>
+  <div class="absolute top-[20%] left-[60%] w-[40vw] h-[40vw] rounded-full bg-[#1E3E62]/60 blur-[80px] pointer-events-none"></div>
+
+  <!-- Subtle radial glow behind text -->
+  <div class="absolute inset-0 bg-[radial-gradient(circle_at_50%_30%,rgba(0,209,255,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+
+  <!-- Very refined faint top grid — only visible on close look -->
+  <div class="absolute inset-0 opacity-[0.08] pointer-events-none" aria-hidden="true">
+    <svg width="100%" height="100%" preserveAspectRatio="none">
+      <defs>
+        <pattern id="fine-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+          <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#00D1FF" stroke-width="0.5"/>
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#fine-grid)" />
+    </svg>
+  </div>
+
+  <div class="relative z-10 max-w-3xl mx-auto px-6">
+    <span class="inline-flex items-center gap-2 bg-[#0B192C]/70 text-accent-cyan text-xs font-medium px-4 py-1.5 rounded-full mb-8 border border-accent-cyan/30 backdrop-blur-sm shadow-[0_0_20px_rgba(0,209,255,0.15)]">
+      <span class="w-1.5 h-1.5 rounded-full bg-accent-cyan animate-pulse"></span>
+      Sistemas con más de 18 años de experiencia en Tlaxcala.
+    </span>
+
+    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-white mb-6 leading-[1.1] drop-shadow-[0_2px_30px_rgba(0,0,0,0.6)]">
+      {headline}
+    </h1>
+
+    <p class="text-lg md:text-xl text-text-muted mb-12 leading-relaxed max-w-2xl mx-auto">
+      {subtitle}
+    </p>
+
+    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+      <a
+        href={primaryHref}
+        class="bg-accent-cyan text-bg-server px-8 py-3.5 rounded-xl font-bold text-base hover:bg-[#00B8DE] transition-all transform hover:-translate-y-0.5 shadow-[0_0_30px_rgba(0,209,255,0.35)] hover:shadow-[0_0_40px_rgba(0,209,255,0.45)]"
+      >{primaryLabel}
+      </a>
+      <a
+        href={secondaryHref}
+        class="border border-white/15 text-white px-8 py-3.5 rounded-xl font-semibold text-base hover:bg-white/5 hover:border-white/30 transition-all backdrop-blur-sm"
+      >{secondaryLabel}
+      </a>
+    </div>
+  </div>
+</section>

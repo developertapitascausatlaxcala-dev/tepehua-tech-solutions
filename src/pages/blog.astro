@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blog');
+---
+
+<Layout title="Blog técnico | Tepehua Tech Solutions">
+  <main class="max-w-6xl mx-auto px-6 py-16">
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-light mb-4">Blog técnico</h1>
+    <p class="text-text-muted mb-12">Artículos sobre automatización, optimización y bases de datos.</p>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {posts.map((post) => (
+        <a href={`/blog/${post.slug}`} class="group bg-card-surface rounded-2xl p-6 border border-[#1E3E62]/50 hover:border-accent-cyan/50 hover:-translate-y-1 transition-all shadow-lg shadow-black/10 block">
+          <header class="mb-4">
+            <span class="text-xs font-medium text-accent-cyan">{post.data.category}</span>
+            <h2 class="text-xl font-bold text-text-light mt-2 group-hover:text-accent-cyan transition-colors">{post.data.title}</h2>
+          </header>
+          <div class="flex items-center gap-4 text-sm text-text-muted">
+            <time datetime={post.data.date.toISOString()}>{post.data.date.toLocaleDateString('es-ES')}</time>
+            <span>•</span>
+            <span>{post.data.readTime}</span>
+          </div>
+        </a>
+      ))}
+    </div>
+  </main>
+</Layout>

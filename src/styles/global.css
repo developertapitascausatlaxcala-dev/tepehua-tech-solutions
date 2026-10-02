@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: 'Inter', sans-serif;
+  --color-bg-server: #0B192C;
+  --color-card-surface: #1E3E62;
+  --color-accent-cyan: #00D1FF;
+  --color-text-light: #F8FAFC;
+  --color-text-muted: #94A3B8;
+  --color-accent-cyan-hover: #00B8DE;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-bg-server);
+  color: var(--color-text-light);
+  font-family: var(--font-inter);
+}

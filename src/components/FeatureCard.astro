@@ -1,0 +1,13 @@
+---
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<article class="bg-card-surface rounded-2xl p-8 border border-[#1E3E62]/50 hover:border-accent-cyan/50 hover:-translate-y-1 transition-all shadow-lg shadow-black/10">
+  <h3 class="text-xl font-bold text-text-light mb-3 tracking-tight">{title}</h3>
+  <p class="text-text-muted leading-relaxed">{description}</p>
+</article>
