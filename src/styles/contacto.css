@@ -1,0 +1,144 @@
+/* ============================================
+   Estilos para el formulario de HubSpot
+   Integrados con el tema oscuro de Tepehua Tech Solutions
+   ============================================ */
+
+/* Contenedor principal del formulario - aplica el tema de tarjetas */
+.hs-form-frame {
+  background-color: var(--color-card-surface) !important;
+  border: 1px solid var(--color-accent-cyan) !important;
+  border-radius: 12px !important;
+  padding: 2rem !important;
+  margin-top: 1rem !important;
+}
+
+/* Campos de entrada y selectores - sobrescribir estilos de HubSpot */
+.hs-form-frame input[type="text"],
+.hs-form-frame input[type="email"],
+.hs-form-frame input[type="tel"],
+.hs-form-frame input[type="url"],
+.hs-form-frame input[type="number"],
+.hs-form-frame input[type="date"],
+.hs-form-frame input[type="search"],
+.hs-form-frame input[type="password"],
+.hs-form-frame select,
+.hs-form-frame textarea {
+  background-color: var(--color-card-surface) !important;
+  border: 1px solid var(--color-accent-cyan) !important;
+  border-radius: 8px !important;
+  padding: 0.75rem 1rem !important;
+  color: var(--color-text-light) !important;
+  font-family: var(--font-inter) !important;
+  font-size: 1rem !important;
+  outline: none !important;
+  transition: all 0.2s ease !important;
+}
+
+/* Estado focus */
+.hs-form-frame input[type="text"]:focus,
+.hs-form-frame input[type="email"]:focus,
+.hs-form-frame input[type="tel"]:focus,
+.hs-form-frame input[type="url"]:focus,
+.hs-form-frame input[type="number"]:focus,
+.hs-form-frame input[type="date"]:focus,
+.hs-form-frame input[type="search"]:focus,
+.hs-form-frame input[type="password"]:focus,
+.hs-form-frame select:focus,
+.hs-form-frame textarea:focus {
+  border-color: var(--color-accent-cyan) !important;
+  box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.15) !important;
+}
+
+/* Placeholder text */
+.hs-form-frame input::placeholder,
+.hs-form-frame textarea::placeholder {
+  color: var(--color-text-muted) !important;
+  opacity: 0.7 !important;
+}
+
+/* Select options */
+.hs-form-frame select option {
+  background-color: var(--color-card-surface) !important;
+  color: var(--color-text-light) !important;
+  padding-left: 0.75rem !important;
+}
+
+/* Textarea */
+.hs-form-frame textarea {
+  min-height: 120px !important;
+  resize: vertical !important;
+}
+
+/* Botón de enviar - sobrescribir estilos de HubSpot */
+.hs-form-frame input[type="submit"],
+.hs-form-frame button[type="submit"],
+.hs-form-frame .hs-button,
+.hs-form-frame .hs-primary {
+  background-color: var(--color-accent-cyan) !important;
+  color: var(--color-text-light) !important;
+  border: none !important;
+  padding: 0.75rem 1.5rem !important;
+  font-family: var(--font-inter) !important;
+  font-weight: 600 !important;
+  font-size: 1rem !important;
+  border-radius: 8px !important;
+  cursor: pointer !important;
+  transition: background-color 0.2s ease !important;
+}
+
+.hs-form-frame input[type="submit"]:hover,
+.hs-form-frame button[type="submit"]:hover,
+.hs-form-frame .hs-button:hover,
+.hs-form-frame .hs-primary:hover {
+  background-color: var(--color-accent-cyan-hover) !important;
+}
+
+.hs-form-frame input[type="submit"]:active,
+.hs-form-frame button[type="submit"]:active,
+.hs-form-frame .hs-button:active,
+.hs-form-frame .hs-primary:active {
+  transform: scale(0.98) !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hs-form-frame {
+    padding: 1.5rem !important;
+    margin-top: 0 !important;
+  }
+  .hs-form-frame input,
+  .hs-form-frame select,
+  .hs-form-frame textarea {
+    padding: 0.65rem 0.75rem !important;
+  }
+}
+
+/* Labels si existen */
+.hs-form-frame label {
+  color: var(--color-text-light) !important;
+  font-weight: 500 !important;
+  margin-bottom: 0.5rem !important;
+  display: block !important;
+}
+
+/* Mensajes de error o validación */
+.hs-form-frame .hs-error-msg,
+.hs-form-frame .hs-form-field-error-msg {
+  color: #ef4444 !important;
+  font-size: 0.875rem !important;
+  margin-top: 0.25rem !important;
+}
+
+/* Mensajes de éxito */
+.hs-form-frame .hs-success-msg {
+  color: var(--color-accent-cyan) !important;
+  font-weight: 500 !important;
+}
+
+/* Asegurarse de que el contenedor ocupe el ancho completo en móviles */
+@media (max-width: 640px) {
+  .hs-form-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
