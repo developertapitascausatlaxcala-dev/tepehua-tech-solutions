@@ -1,18 +1,41 @@
 /* ============================================
-   Estilos para el formulario de HubSpot
-   Integrados con el tema oscuro de Tepehua Tech Solutions
+   Glassmorphism Form Styles for Tepehua Tech Solutions
+   Deep navy page background (#0A192F) with white glassmorphism form container
    ============================================ */
 
-/* Contenedor principal del formulario - aplica el tema de tarjetas */
-.hs-form-frame {
-  background-color: var(--color-card-surface) !important;
-  border: 1px solid var(--color-accent-cyan) !important;
-  border-radius: 12px !important;
-  padding: 2rem !important;
-  margin-top: 1rem !important;
+/* Page background - maintain deep navy */
+body {
+  background-color: #0A192F !important;
 }
 
-/* Campos de entrada y selectores - sobrescribir estilos de HubSpot */
+/* Form container with glassmorphism effect */
+.hs-form-frame {
+  background-color: rgba(255, 255, 255, 0.15) !important;
+  border: 1px solid var(--color-accent-cyan) !important;
+  border-radius: 16px !important;
+  padding: 2.5rem !important;
+  margin-top: 1.5rem !important;
+  backdrop-filter: blur(12px) !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Text colors - dark navy for titles/labels, white for body text */
+.hs-form-frame h2,
+.hs-form-frame h3,
+.hs-form-frame label {
+  color: #0F172A !important;
+  font-weight: 600 !important;
+  margin-bottom: 1rem !important;
+}
+
+.hs-form-frame p,
+.hs-form-frame input::placeholder,
+.hs-form-frame textarea {
+  color: #FFFFFF !important;
+}
+
+/* Input fields - white background with subtle border */
 .hs-form-frame input[type="text"],
 .hs-form-frame input[type="email"],
 .hs-form-frame input[type="tel"],
@@ -23,59 +46,49 @@
 .hs-form-frame input[type="password"],
 .hs-form-frame select,
 .hs-form-frame textarea {
-  background-color: var(--color-card-surface) !important;
-  border: 1px solid var(--color-accent-cyan) !important;
+  background-color: #FFFFFF !important;
+  border: 1px solid #CBD5E1 !important;
   border-radius: 8px !important;
   padding: 0.75rem 1rem !important;
-  color: var(--color-text-light) !important;
+  color: #0F172A !important;
   font-family: var(--font-inter) !important;
   font-size: 1rem !important;
   outline: none !important;
-  transition: all 0.2s ease !important;
+  transition: border-color 0.2s ease !important;
 }
 
-/* Estado focus */
-.hs-form-frame input[type="text"]:focus,
-.hs-form-frame input[type="email"]:focus,
-.hs-form-frame input[type="tel"]:focus,
-.hs-form-frame input[type="url"]:focus,
-.hs-form-frame input[type="number"]:focus,
-.hs-form-frame input[type="date"]:focus,
-.hs-form-frame input[type="search"]:focus,
-.hs-form-frame input[type="password"]:focus,
+/* Focus state - accent cyan border */
+.hs-form-frame input:focus,
 .hs-form-frame select:focus,
 .hs-form-frame textarea:focus {
   border-color: var(--color-accent-cyan) !important;
-  box-shadow: 0 0 0 3px rgba(0, 209, 255, 0.15) !important;
+  box-shadow: 0 0 0 2px rgba(0, 209, 255, 0.2) !important;
 }
 
-/* Placeholder text */
-.hs-form-frame input::placeholder,
-.hs-form-frame textarea::placeholder {
-  color: var(--color-text-muted) !important;
-  opacity: 0.7 !important;
-}
-
-/* Select options */
+/* Select options - maintain dark text on light background */
 .hs-form-frame select option {
-  background-color: var(--color-card-surface) !important;
-  color: var(--color-text-light) !important;
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
   padding-left: 0.75rem !important;
 }
 
-/* Textarea */
+/* Textarea - adjust for glassmorphism */
 .hs-form-frame textarea {
   min-height: 120px !important;
   resize: vertical !important;
+  background-color: #FFFFFF !important;
+  color: #0F172A !important;
+  border: 1px solid #CBD5E1 !important;
+  border-radius: 8px !important;
 }
 
-/* Botón de enviar - sobrescribir estilos de HubSpot */
+/* Button - maintain dark navy text on white background */
 .hs-form-frame input[type="submit"],
 .hs-form-frame button[type="submit"],
 .hs-form-frame .hs-button,
 .hs-form-frame .hs-primary {
   background-color: var(--color-accent-cyan) !important;
-  color: var(--color-text-light) !important;
+  color: #FFFFFF !important;
   border: none !important;
   padding: 0.75rem 1.5rem !important;
   font-family: var(--font-inter) !important;
@@ -83,7 +96,7 @@
   font-size: 1rem !important;
   border-radius: 8px !important;
   cursor: pointer !important;
-  transition: background-color 0.2s ease !important;
+  transition: all 0.2s ease !important;
 }
 
 .hs-form-frame input[type="submit"]:hover,
@@ -91,20 +104,21 @@
 .hs-form-frame .hs-button:hover,
 .hs-form-frame .hs-primary:hover {
   background-color: var(--color-accent-cyan-hover) !important;
+  transform: translateY(-1px) !important;
 }
 
 .hs-form-frame input[type="submit"]:active,
 .hs-form-frame button[type="submit"]:active,
 .hs-form-frame .hs-button:active,
 .hs-form-frame .hs-primary:active {
-  transform: scale(0.98) !important;
+  transform: scale(0.97) !important;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .hs-form-frame {
-    padding: 1.5rem !important;
-    margin-top: 0 !important;
+    padding: 2rem !important;
+    margin-top: 1rem !important;
   }
   .hs-form-frame input,
   .hs-form-frame select,
@@ -113,15 +127,15 @@
   }
 }
 
-/* Labels si existen */
+/* Labels - ensure proper visibility */
 .hs-form-frame label {
-  color: var(--color-text-light) !important;
+  color: #0F172A !important;
   font-weight: 500 !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
 }
 
-/* Mensajes de error o validación */
+/* Error messages - red for visibility */
 .hs-form-frame .hs-error-msg,
 .hs-form-frame .hs-form-field-error-msg {
   color: #ef4444 !important;
@@ -129,16 +143,22 @@
   margin-top: 0.25rem !important;
 }
 
-/* Mensajes de éxito */
+/* Success messages */
 .hs-form-frame .hs-success-msg {
   color: var(--color-accent-cyan) !important;
   font-weight: 500 !important;
 }
 
-/* Asegurarse de que el contenedor ocupe el ancho completo en móviles */
+/* Mobile optimization */
 @media (max-width: 640px) {
   .hs-form-frame {
     width: 100% !important;
     max-width: 100% !important;
+    padding: 1.75rem !important;
+  }
+  .hs-form-frame input,
+  .hs-form-frame select,
+  .hs-form-frame textarea {
+    padding: 0.6rem 0.75rem !important;
   }
 }
