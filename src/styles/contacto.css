@@ -20,19 +20,29 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
 }
 
-/* Text colors - dark navy for titles/labels, white for body text */
+/* All text inside form must be white for visibility over translucent background */
 .hs-form-frame h2,
 .hs-form-frame h3,
-.hs-form-frame label {
+.hs-form-frame label,
+.hs-form-frame .hs-form-field-label,
+.hs-form-frame p,
+.hs-form-frame span,
+.hs-form-frame div:not(input):not(select):not(textarea) {
+  color: #FFFFFF !important;
+  font-weight: 500 !important;
+}
+
+/* Keep dark navy for input text only */
+.hs-form-frame input,
+.hs-form-frame select,
+.hs-form-frame textarea {
   color: #0F172A !important;
-  font-weight: 600 !important;
-  margin-bottom: 1rem !important;
 }
 
 .hs-form-frame p,
 .hs-form-frame input::placeholder,
-.hs-form-frame textarea {
-  color: #FFFFFF !important;
+.hs-form-frame textarea::placeholder {
+  color: rgba(255, 255, 255, 0.85) !important;
 }
 
 /* Input fields - white background with subtle border */
@@ -129,7 +139,7 @@ body {
 
 /* Labels - ensure proper visibility */
 .hs-form-frame label {
-  color: #0F172A !important;
+  color: #FFFFFF !important;
   font-weight: 500 !important;
   margin-bottom: 0.5rem !important;
   display: block !important;
