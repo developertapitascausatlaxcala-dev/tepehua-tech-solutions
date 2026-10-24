@@ -5,22 +5,22 @@
 
 /* Page background - maintain deep navy */
 body {
-  background-color: #0A192F !important;
+  background-color: #0b192c !important;
 }
 
-/* Form container with glassmorphism effect */
+/* Form container - congruente con tonos de la pagina (navy #0B192C, card #1E3E62, cyan #00D1FF) */
 .hs-form-frame {
-  background-color: rgba(255, 255, 255, 0.15) !important;
+  background-color: var(--color-card-surface) !important;
   border: 1px solid var(--color-accent-cyan) !important;
   border-radius: 16px !important;
   padding: 2.5rem !important;
   margin-top: 1.5rem !important;
-  backdrop-filter: blur(12px) !important;
-  -webkit-backdrop-filter: blur(12px) !important;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
 }
 
-/* All text inside form must be white for visibility over translucent background */
+/* Texto claro y legible sobre fondo card-surface */
 .hs-form-frame h2,
 .hs-form-frame h3,
 .hs-form-frame label,
@@ -28,21 +28,22 @@ body {
 .hs-form-frame p,
 .hs-form-frame span,
 .hs-form-frame div:not(input):not(select):not(textarea) {
-  color: #FFFFFF !important;
+  color: var(--color-text-light) !important;
   font-weight: 500 !important;
 }
 
-/* Keep dark navy for input text only */
+/* Texto de inputs oscuro para contraste sobre fondo blanco */
 .hs-form-frame input,
 .hs-form-frame select,
 .hs-form-frame textarea {
-  color: #0F172A !important;
+  color: #0b192c !important;
 }
 
+/* Placeholders grises oscuros para legibilidad */
 .hs-form-frame p,
 .hs-form-frame input::placeholder,
 .hs-form-frame textarea::placeholder {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: #fff !important;
 }
 
 /* Input fields - white background with subtle border */
@@ -56,11 +57,11 @@ body {
 .hs-form-frame input[type="password"],
 .hs-form-frame select,
 .hs-form-frame textarea {
-  background-color: #FFFFFF !important;
-  border: 1px solid #CBD5E1 !important;
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
   border-radius: 8px !important;
   padding: 0.75rem 1rem !important;
-  color: #0F172A !important;
+  color: #0f172a !important;
   font-family: var(--font-inter) !important;
   font-size: 1rem !important;
   outline: none !important;
@@ -77,8 +78,8 @@ body {
 
 /* Select options - maintain dark text on light background */
 .hs-form-frame select option {
-  background-color: #FFFFFF !important;
-  color: #0F172A !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
   padding-left: 0.75rem !important;
 }
 
@@ -86,9 +87,9 @@ body {
 .hs-form-frame textarea {
   min-height: 120px !important;
   resize: vertical !important;
-  background-color: #FFFFFF !important;
-  color: #0F172A !important;
-  border: 1px solid #CBD5E1 !important;
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
   border-radius: 8px !important;
 }
 
@@ -98,7 +99,7 @@ body {
 .hs-form-frame .hs-button,
 .hs-form-frame .hs-primary {
   background-color: var(--color-accent-cyan) !important;
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   border: none !important;
   padding: 0.75rem 1.5rem !important;
   font-family: var(--font-inter) !important;
@@ -139,7 +140,7 @@ body {
 
 /* Labels - ensure proper visibility */
 .hs-form-frame label {
-  color: #FFFFFF !important;
+  color: #ffffff !important;
   font-weight: 500 !important;
   margin-bottom: 0.5rem !important;
   display: block !important;

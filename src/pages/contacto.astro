@@ -2,12 +2,12 @@
     import Layout from '../layouts/Layout.astro';
     import '../styles/contacto.css';
     ---
-    
+
     <Layout title="Contacto | Tepehua Tech Solutions">
       <main class="max-w-6xl mx-auto px-6 py-16">
         <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-text-light mb-4">Contacto</h1>
         <p class="text-text-muted mb-12">Estamos en Tlaxcala. Hablemos de tu proyecto.</p>
-    
+
         <div class="grid md:grid-cols-2 gap-12">
           <section aria-label="Canales de contacto">
             <h2 class="text-xl font-bold text-text-light mb-4">Canales directos</h2>
@@ -18,11 +18,41 @@
               <li><strong>Horario:</strong> Lunes a Viernes, 9:00 — 18:00</li>
             </ul>
           </section>
-    
+
           <section aria-label="Formulario de contacto">
-            <!-- HubSpot form embed -->
-            <script src="https://js.hsforms.net/forms/embed/52150652.js" defer></script>
-            <div class="hs-form-frame" data-region="na1" data-form-id="5a60e0da-e70d-4764-a42f-3eb6132fdd10" data-portal-id="52150652"></div>
+            <form class="contact-form" action="https://formsubmit.co/ramirotepehua@gmail.com" method="POST" style="background-color:#1E3E62;border:1px solid #00D1FF;border-radius:16px;padding:2.5rem;margin-top:1.5rem;box-shadow:0 4px 12px rgba(0,0,0,0.3);">
+              <input type="hidden" name="_subject" value="Nuevo mensaje desde Tepehua Tech Solutions">
+              <h2 style="font-size:1.5rem;font-weight:bold;color:#F8FAFC;margin-bottom:0.5rem;">Ponte en contacto</h2>
+              <p style="color:#F8FAFC;margin-bottom:1.5rem;opacity:0.85;">Nos encantaría escucharte. Llena el formulario y nos pondremos en contacto contigo lo antes posible.</p>
+
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1rem;">
+                <div>
+                  <label for="nombre" style="display:block;color:#F8FAFC;font-weight:500;margin-bottom:0.25rem;font-size:0.875rem;">Nombre</label>
+                  <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required style="width:100%;padding:0.75rem 1rem;border:1px solid #CBD5E1;border-radius:8px;background-color:#FFFFFF;color:#0B192C;font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;">
+                </div>
+                <div>
+                  <label for="apellidos" style="display:block;color:#F8FAFC;font-weight:500;margin-bottom:0.25rem;font-size:0.875rem;">Apellidos</label>
+                  <input type="text" id="apellidos" name="apellidos" placeholder="Tus apellidos" required style="width:100%;padding:0.75rem 1rem;border:1px solid #CBD5E1;border-radius:8px;background-color:#FFFFFF;color:#0B192C;font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;">
+                </div>
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label for="email" style="display:block;color:#F8FAFC;font-weight:500;margin-bottom:0.25rem;font-size:0.875rem;">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="tu@email.com" required style="width:100%;padding:0.75rem 1rem;border:1px solid #CBD5E1;border-radius:8px;background-color:#FFFFFF;color:#0B192C;font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;">
+              </div>
+
+              <div style="margin-bottom:1rem;">
+                <label for="telefono" style="display:block;color:#F8FAFC;font-weight:500;margin-bottom:0.25rem;font-size:0.875rem;">Número de teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+52 ..." style="width:100%;padding:0.75rem 1rem;border:1px solid #CBD5E1;border-radius:8px;background-color:#FFFFFF;color:#0B192C;font-family:inherit;font-size:1rem;outline:none;transition:border-color 0.2s;">
+              </div>
+
+              <div style="margin-bottom:1.5rem;">
+                <label for="mensaje" style="display:block;color:#F8FAFC;font-weight:500;margin-bottom:0.25rem;font-size:0.875rem;">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu proyecto..." required style="width:100%;padding:0.75rem 1rem;border:1px solid #CBD5E1;border-radius:8px;background-color:#FFFFFF;color:#0B192C;font-family:inherit;font-size:1rem;outline:none;resize:vertical;min-height:120px;transition:border-color 0.2s;line-height:1.5;"></textarea>
+              </div>
+
+              <button type="submit" style="width:100%;padding:0.75rem 1.5rem;background-color:#00D1FF;color:#FFFFFF;border:none;border-radius:8px;font-weight:600;font-size:1rem;cursor:pointer;transition:all 0.2s;font-family:inherit;">Enviar mensaje</button>
+            </form>
           </section>
         </div>
       </main>
